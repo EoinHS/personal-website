@@ -1,0 +1,64 @@
+body {
+    padding: 10px;
+    display: flex;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.content {
+    flex: auto;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pdf {
+    aspect-ratio: 4/3;
+    height: 100vh;
+}
+
+.sidebar {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    height: 100vh;
+    background-color:#6e76b9
+}
+
+.sidebar .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .container a {
+    width: 100%;
+    height: 50px;
+    background-color:#ffffff;
+    display: flex;
+    justify-content: left;
+    align-items:center;
+    padding-right: 20px;
+    &:hover {
+        background-color: #ff8282;
+    }
+    &::before {
+        content: "";
+        height: 80%;
+        border-color: aqua;
+        border-style: solid;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    &.subsection {
+        padding-left: 20px;
+        padding-right: 0px;
+    }
+}
+
+.sidebar div:nth-last-child(1) {
+    display:flex;
+    align-content:flex-start;
+    padding: 10px;
+}

@@ -1,0 +1,19 @@
+extends ../layout
+
+block scripts
+	script(src="/scripts/sudoku_script.js")
+	link(rel="stylesheet", href="/styles/sudoku-grid.css", type="text/css")
+
+block content
+
+	p.error_message
+
+	h1 Sudoku!
+
+	div.button-container
+		button.new-sudoku-btn New sudoku
+		button.check-btn Check
+
+	include sudoku-grid.pug
+
+	

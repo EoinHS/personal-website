@@ -1,0 +1,46 @@
+.sudoku-grid {
+    display: flex;
+    flex-direction: column;
+    --square-dimension: 75px;
+    border-style: solid;
+    border-width: 3px;
+
+    input {
+        width: var(--square-dimension);
+        height: var(--square-dimension);
+        font-size: 3em;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        padding: 0px;
+
+        &:focus-visible {
+            outline: none;
+        }
+
+        &:disabled {
+            border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+        }
+    }
+
+    .container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        pointer-events: none;
+
+        div {
+            display: flex;
+            pointer-events: none;
+
+            .box-outline {
+                width: calc(3*var(--square-dimension));
+                height: calc(3*var(--square-dimension));
+                border-color: black;
+                border-width: 3px;
+                border-style: solid;
+                pointer-events: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+doctype html
+
+head
+	link(rel="stylesheet", href="/styles/style.css")
+	block scripts
+body
+	div.sidebar
+		h1 Eoin Howard Scully
+		p eoinhs647@gmail.com | 07856701358
+		div.container
+			a(href="/") Home
+			a(href="/about-me") About me
+			a(href="/CV") CV
+			a(href="/Contact") Contact me
+			a(href="/Sudoku/about") Sudoku
+			a(href="/Sudoku/generator").subsection Sudoku Generator
+			a(href="/Sudoku/solver").subsection Sudoku Solver
+			a Other Projects
+		div
+			button Dark mode
+	div.content
+		block content

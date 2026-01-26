@@ -1,0 +1,18 @@
+extends ../layout
+
+block scripts
+	link(rel="stylesheet", href="/styles/sudoku-grid.css", type="text/css")
+	script(src="/scripts/sudoku_solver.js")
+
+block content
+	
+	p.error-message
+
+	h1 Sudoku Solver
+
+	div.button-container
+		button.solve-btn Solve
+		button.reset-btn Reset Grid
+
+	include sudoku-grid.pug
+

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Main-Class: org.example.Main
+Class-Path: groovy-json-4.0.28.jar groovy-xml-4.0.28.jar kotlin-stdlib-2
+ .2.20.jar gradle-kotlin-dsl-9.2.1.jar groovy-ant-4.0.28.jar groovy-groo
+ vydoc-4.0.28.jar gradle-kotlin-dsl-extensions-9.2.1.jar groovy-astbuild
+ er-4.0.28.jar gradle-api-9.2.1.jar gradle-kotlin-dsl-shared-runtime-9.2
+ .1.jar gradle-base-services-9.2.1.jar groovy-dateutil-4.0.28.jar gradle
+ -core-kotlin-extensions-9.2.1.jar gradle-core-9.2.1.jar gradle-installa
+ tion-beacon-9.2.1.jar groovy-datetime-4.0.28.jar gradle-core-flow-servi
+ ces-api-9.2.1.jar gradle-kotlin-dsl-tooling-models-9.2.1.jar groovy-4.0
+ .28.jar groovy-templates-4.0.28.jar gradle-base-services-groovy-9.2.1.j
+ ar gradle-core-api-9.2.1.jar groovy-nio-4.0.28.jar javaparser-core-3.27
+ .0.jar kotlin-reflect-2.2.20.jar
+
