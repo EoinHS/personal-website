@@ -6,7 +6,7 @@ import { JavaCaller } from 'java-caller'
 import { readdir, stat } from 'node:fs/promises'
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 const java = new JavaCaller({
     classPath: 'Jars/Sudoku_DL.jar',
