@@ -3,7 +3,8 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'personal-website-yflixa'
+# app = 'personal-website-yflixa'
+app = 'eoins-website'
 primary_region = 'ams'
 
 [build]
