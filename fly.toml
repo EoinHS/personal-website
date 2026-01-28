@@ -1,11 +1,10 @@
-# fly.toml app configuration file generated for personal-website-yflixa on 2026-01-28T00:52:57Z
+# fly.toml app configuration file generated for eoinhs on 2026-01-28T01:07:33Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-# app = 'personal-website-yflixa'
-app = 'eoins-website'
-primary_region = 'ams'
+app = 'eoinhs'
+primary_region = 'lhr'
 
 [build]
 
