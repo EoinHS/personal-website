@@ -25,7 +25,7 @@ COPY package-lock.json package.json ./
 RUN npm ci
 
 # Install Java (WIP)
-RUN apt-get install default-jdk
+RUN apt-get install -y default-jdk 
 
 # Copy application code
 COPY . .
