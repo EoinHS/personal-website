@@ -21,8 +21,10 @@ app.use(express.static(path.join('./static')));
 
 async function new_sudoku() {
     const { status, stdout, stderr } = await java.run(['--generate', '--json']);
+    console.log("Got here");
+    console.log(status);
+    console.log(stderr);
     console.log(stdout);
-    console.log(JSON.parse(stdout));
     return JSON.parse(stdout);
 }
 
