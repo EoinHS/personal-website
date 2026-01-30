@@ -29,7 +29,7 @@ COPY . .
 
 FROM public.ecr.aws/docker/library/alpine:latest AS build-stage-2
 
-RUN apk add openjdk-25-jre
+RUN apk add openjdk25-jre
 
 # Final stage for app image
 FROM base
