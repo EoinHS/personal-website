@@ -10,7 +10,8 @@ const port = process.env.PORT || 8080;
 
 const java = new JavaCaller({
     classPath: 'Jars/Sudoku_DL.jar',
-    mainClass: 'org.example.Main'
+    mainClass: 'org.example.Main',
+    minimumJavaVersion: 25
 })
 
 // view engine setup

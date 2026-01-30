@@ -24,12 +24,12 @@ RUN apt-get update -qq && \
 COPY package-lock.json package.json ./
 RUN npm ci
 
-# Install Java (WIP)
-RUN apt-get install -y default-jdk 
-
 # Copy application code
 COPY . .
 
+FROM public.ecr.aws/docker/library/alpine:latest AS build-stage-2
+
+RUN apk add openjdk-25-jre
 
 # Final stage for app image
 FROM base
