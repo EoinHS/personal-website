@@ -34,6 +34,8 @@ RUN apk add openjdk-25-jre
 # Final stage for app image
 FROM base
 
+COPY --from=build-stage-2 /app /app
+
 # Copy built application
 COPY --from=build /app /app
 
