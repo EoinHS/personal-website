@@ -25,7 +25,7 @@ function limitInput(e) {
 
 async function getNewSudoku(e) {
 
-    const url = "http://eoinhs.fly.dev/sudoku/new"
+    const url = "https://eoinhs.fly.dev/sudoku/new"
 
     try {
 

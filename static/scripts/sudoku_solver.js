@@ -37,7 +37,7 @@ async function solve_sudoku() {
 
     console.log(puzzle);
 
-    const url = `http://eoinhs.fly.dev/sudoku/solve/${puzzle}`;
+    const url = `https://eoinhs.fly.dev/sudoku/solve/${puzzle}`;
 
     try {
 
