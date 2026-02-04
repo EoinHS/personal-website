@@ -12,7 +12,6 @@ WORKDIR /app
 # Set production environment
 ENV NODE_ENV="production"
 
-
 # Throw-away build stage to reduce size of final image
 FROM base AS build
 
@@ -27,16 +26,8 @@ RUN npm ci
 # Copy application code
 COPY . .
 
-FROM public.ecr.aws/docker/library/alpine:latest AS build-stage-2
-
-RUN apk add openjdk25-jre
-
 # Final stage for app image
 FROM base
-
-COPY --from=build-stage-2 /usr/lib/jvm/ /usr/lib/jvm/
-
-ENV JAVA_HOME="/usr/lib/jvm/"
 
 # Copy built application
 COPY --from=build /app /app

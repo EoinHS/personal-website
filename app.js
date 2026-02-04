@@ -2,8 +2,8 @@ import express from 'express';
 import path from 'path'
 import fs from 'fs';
 
-import { JavaCaller } from 'java-caller'
-import { readdir, stat } from 'node:fs/promises'
+import { JavaCaller } from 'java-caller';
+import { readdir, stat } from 'node:fs/promises';
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -14,6 +14,8 @@ const java = new JavaCaller({
     minimumJavaVersion: 25
 })
 
+await java.manageJavaInstall();
+
 // view engine setup
 app.set('views', path.join('./views'));
 app.set('view engine', 'pug');
@@ -22,16 +24,11 @@ app.use(express.static(path.join('./static')));
 
 async function new_sudoku() {
     const { status, stdout, stderr } = await java.run(['--generate', '--json']);
-    console.log("Got here");
-    console.log(status);
-    console.log(stderr);
-    console.log(stdout);
     return JSON.parse(stdout);
 }
 
 async function solve_sudoku(puzzle) {
     const { status, stdout, stderr } = await java.run(['--solve', puzzle, '--json']);
-    console.log(stdout);
     return JSON.parse(stdout);
 }
 
@@ -60,7 +57,7 @@ async function register_routes(dir, excluded_files) {
             // remove extension
             // remove leading ./views
             var parsed_file = path.parse(current_dir);
-            var subdirs = parsed_file.dir.split('\\').slice(1); // all subdirectories but /views
+            var subdirs = parsed_file.dir.split('/').slice(1); // all subdirectories but /views
             var route = `${subdirs.length > 0 ? '/' : ''}${subdirs.join('/')}/${parsed_file.name}` // construct route
             var filepath = `${subdirs.join('/')}${subdirs.length > 0 ? '/' : ''}${parsed_file.base}`
             register_route(route, filepath);
