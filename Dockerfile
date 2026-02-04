@@ -34,7 +34,9 @@ RUN apk add openjdk25-jre
 # Final stage for app image
 FROM base
 
-COPY --from=build-stage-2 /app /app
+COPY --from=build-stage-2 /usr/lib/jvm/ /usr/lib/jvm/
+
+ENV JAVA_HOME="/usr/lib/jvm/"
 
 # Copy built application
 COPY --from=build /app /app
