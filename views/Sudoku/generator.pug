@@ -10,10 +10,18 @@ block content
 
 	h1 Sudoku!
 
+	p This sudoku generator treats sudoku as as an exact cover problem and uses algorithm X to generate solved puzzles
+	p It can do this by treating generating a sudoku as solvng the empty grid, this gives us fully solved sudokus
+	p By randomly knocking out a number of indexes, we can use this solved sudokus to generate puzzles!
+
 	div.button-container
 		button.new-sudoku-btn New sudoku
 		button.check-btn Check
 
 	include sudoku-grid.pug
+
+	h2 Planned future improvement:
+	p Traditionally a sudoku can only have one solution, I have plans to go back and make it so this program generates sudokus with only one solution
+	p A brute force approach could be used, with a small database being used to store sudokus once they are found
 
 	

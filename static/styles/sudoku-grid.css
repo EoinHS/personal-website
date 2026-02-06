@@ -1,3 +1,13 @@
+.button-container {
+    height: 10vh;
+    width: 30vw;
+
+    button {
+        width: 40%;
+        height: 100%;
+    }
+}
+
 .sudoku-grid {
     display: flex;
     flex-direction: column;
