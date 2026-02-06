@@ -1,6 +1,7 @@
 .button-container {
     height: 10vh;
     width: 30vw;
+    margin-bottom: 10px;
 
     button {
         width: 40%;
