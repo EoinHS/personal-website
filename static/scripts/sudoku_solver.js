@@ -58,6 +58,8 @@ async function solve_sudoku() {
 
     } catch (e) {
         console.error(e);
+        error_message.innerText = "Oops! something went wrong, please try again later :)";
+        error_message.style.display = 'block';
     }
 }
 
