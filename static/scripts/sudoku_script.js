@@ -57,6 +57,7 @@ async function getNewSudoku(e) {
         // Log error and display to user
         console.error(e);
         error_message.innerText = "Oops! something went wrong, please try again later :)";
+        error_message.style.display = 'block';
     }
 }
 

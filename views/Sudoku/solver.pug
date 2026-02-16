@@ -5,15 +5,15 @@ block scripts
 	script(src="/scripts/sudoku_solver.js")
 
 block content
-	
-	p.error-message
 
 	h1 Sudoku Solver
 
 	p This sudoku solver treats sudoku as an exact cover problem and uses Knuth's algorithm X to find solutions
+	
+	p.error_message
 
 	div.button-container
-		button.solve-btn Solve
+		button.option.solve-btn Solve
 		button.reset-btn Reset Grid
 
 	include sudoku-grid.pug

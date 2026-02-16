@@ -1,22 +1,44 @@
+//	link(rel="stylesheet", href="/styles/style.css")
+//	block scripts
+//body
+//	div.sidebar
+//		h1 Eoin Howard Scully
+//		p eoinhs647@gmail.com | 07856701358
+//		div.container
+//			a(href="/") Home
+//			a(href="/about-me") About me
+//			a(href="/CV") CV
+//			a(href="/Contact") Contact me
+//			a(href="/Sudoku/about") Sudoku
+//			a(href="/Sudoku/generator").subsection Sudoku Generator
+//			a(href="/Sudoku/solver").subsection Sudoku Solver
+//			//a Other Projects
+//		div
+//			//button Dark mode
+//	div.content
+//		block content
+
 doctype html
 
-head
-	link(rel="stylesheet", href="/styles/style.css")
-	block scripts
+head 
+    link(rel="stylesheet" href="/styles/layout.css")
+    block scripts
 body
-	div.sidebar
-		h1 Eoin Howard Scully
-		p eoinhs647@gmail.com | 07856701358
-		div.container
-			a(href="/") Home
-			a(href="/about-me") About me
-			a(href="/CV") CV
-			a(href="/Contact") Contact me
-			a(href="/Sudoku/about") Sudoku
-			a(href="/Sudoku/generator").subsection Sudoku Generator
-			a(href="/Sudoku/solver").subsection Sudoku Solver
-			//a Other Projects
-		div
-			//button Dark mode
-	div.content
-		block content
+    div.banner 
+        h1 Eoin Howard Scully 
+        h3 078567 01358 | eoinhs647@gmail.com
+        div.buttons 
+            a(href="/").option Home
+            a(href="/about-me").option About me
+            a(href="/CV").option CV
+            a(href="/Contact").option Contact me
+            div.dropdown 
+                div.option.dropdown-label
+                    img(src="/icons/next.png")
+                    p Sudoku
+                div.dropdown-content
+                    a(href="/Sudoku/generator").option Generator
+                    a(href="/Sudoku/solver").option Solver
+    div.content
+        
+        block content 

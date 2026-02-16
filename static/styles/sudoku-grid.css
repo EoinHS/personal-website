@@ -1,14 +1,20 @@
 .button-container {
-    height: 10vh;
-    width: 25vw;
-    margin-bottom: 10px;
-
+    width: 350px;
+    margin: 10px;
     display: flex;
     justify-content: space-between;
 
     button {
-        width: 40%;
-        height: 100%;
+        width: 150px;
+        height: 50px;
+        background-color: #2c7da0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: #a9d6e5;
+        }
     }
 }
 
