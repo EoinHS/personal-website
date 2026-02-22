@@ -57,7 +57,7 @@ async function register_routes(dir, excluded_files) {
             // remove extension
             // remove leading ./views
             var parsed_file = path.parse(current_dir);
-            var subdirs = parsed_file.dir.split('\\').slice(1); // all subdirectories but /views
+            var subdirs = parsed_file.dir.split(path.sep).slice(1); // all subdirectories but /views
             var route = `${subdirs.length > 0 ? '/' : ''}${subdirs.join('/')}/${parsed_file.name}` // construct route
             var filepath = `${subdirs.join('/')}${subdirs.length > 0 ? '/' : ''}${parsed_file.base}`
             register_route(route, filepath);
